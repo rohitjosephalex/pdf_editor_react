@@ -1,0 +1,21 @@
+.Files{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Files-Menu{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  margin-top: 50px;
+    background-color: var(--card_colour);
+    height: 75vh;
+    width: 85vw;
+    border-radius: 10px;
+  }
+  .Files-Menu h3{
+    color: var( --body_colour);
+    margin-top: 25px;
+  }

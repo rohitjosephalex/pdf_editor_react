@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Pattaya&family=Poppins:ital,wght@0,600;1,400&display=swap" rel="stylesheet');
+
+:root {
+
+  --body_background: white;
+  --body_colour: #333333;
+  --card_colour: rgb(209, 209, 209);
+
+}
+
+[data-theme='dark'] {
+  --body_background: #232323;
+  --body_colour: white;
+  --card_colour: #6c6c6c;
+}
+
+* {
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+body {
+  background-color: var(--body_background);
+  color: var(--body_colour);
+}
+
+.header-top {
+  background-color: var(--body_background);
+  color: var(--body_colour);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 25px;
+  margin: 0;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-item.name {
+  font-family: 'Pattaya';
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.header-item.components {
+display: inline;
+
+width: fit-content;
+text-align: center;
+justify-content: center;
+align-items: center ;
+}
+.upload {
+  background-color: var(--body_background);
+  color: var(--body_colour);
+
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-heading {
+  padding-bottom: 25px;
+}
+
+.upload-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: var(--card_colour);
+  height: 70vh;
+  width: 70vw;
+  position: relative;
+  /* box-shadow: inset 0 0 0 25px var( --card_colour), inset 0 0 0 27px var(--body_colour); */
+}
+
+.upload-card-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 90%;
+  width: 95%;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.upload-card-wraper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dotted var(--body_colour);
+  /* Adjust the size and color of the border */
+  border-radius: 8px;
+  /* Adjust the border radius to control the dotted line spacing */
+  z-index: -1;
+}
+
+.upload-card-heading {
+  align-items: center;
+  text-align: center;
+  padding-bottom: 35px;
+}
+.upload-logo{
+  margin: 0;
+  height: 80px;
+  width: auto;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7f50;
+  /* Matte orange color */
+  color: #fff;
+  /* White text color */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #e64a19;
+  /* Darker orange on hover */
+}
+.upload-card-heading{
+  font-size: 25px;
+}
+h3,h5 {
+  margin: 0;
+}
+.btn.manipulate{
+  width: 120px;
+
+}
+.header-item {
+  flex: 1;
+  margin: 10px;
+  font-family: montserrat;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 19px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #858484;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15.7px;
+  width: 15.7px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider:before {
+  background-color: #858484;
+}
+
+input:checked+.slider {
+  background-color: white;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #727272;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(15.7px);
+  -ms-transform: translateX(15.7px);
+  transform: translateX(15.7px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  width: 15.7px;
+  height: 15.7px;
+  top: 1.5px;
+
+}
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.pdf-preview {
+  display: flex;
+  flex-direction: column;
+max-width: 95vw; 
+  margin: 25px 0; 
+  max-height: 95vh;
+  overflow-y: scroll;
+   border: 2px solid #bbbaba; 
+}
+
+.pdf-page {
+  margin: 10px;
+  border: 1px solid #ccc; 
+  margin-bottom: 10px; 
+  padding: 10px; 
+}
+
+.pdf-page-number {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--body_colour);
+  margin-top: 5px; 
+}
+.page{
+  display: flex;
+  flex-direction: row;
+}
+
+.pageNo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(49, 49, 49, 0.5);
+	/* Semi-transparent black background for the blur effect */
+	backdrop-filter: blur(.5px);
+	/* Adjust the blur amount as needed */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	/* Adjust the z-index to ensure it's above other content */
+}
+
+.popup-container.content {
+  padding-top: 15px;
+	position: relative;
+	display: flex;
+  flex-direction: column;
+  row-gap: 30px ;
+	background: var(--body_background);
+  color: var(--body_colour);
+	height: 320px;
+	width: 280px;
+	padding: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+
+}
+.popup-container.content h3{
+margin-top: 35px;
+}
+
+.popup-close {
+	position: absolute;
+
+	top: 5px;
+	right: 5px;
+	/* width: 30px; */
+	/* height: 30px; */
+	background: transparent;
+	/* Background color set to grey */
+	border: none;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	/* Adjust the font size as needed */
+	color: grey;
+}
+
+.popup-close::before {
+	content: "\2716";
+}
+
+.input {
+ width: 250px;
+  margin-bottom: 15px;
+	flex: 1;
+	/* width: 65%; */
+	background-color: var(--card_colour);
+  color: var(--body_colour);
+	padding: 10px;
+	margin: 5px;
+	border: none;
+	border-radius: 5px;
+  
+}
+.input:focus {
+    outline: none; /* Remove the default outline */
+    border: none;  /* Remove the border */
+}
+
