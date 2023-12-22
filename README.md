@@ -17,3 +17,5 @@ Clone this repository to your local machine:
 To run the code
 
 ### npm run dev
+
+rember to run the backend server to use the full functionality of the app,  linked: https://github.com/rohitjosephalex/pdf_editor_node
